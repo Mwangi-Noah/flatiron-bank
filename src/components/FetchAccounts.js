@@ -7,7 +7,7 @@ function FetchAccounts() {
     const [transaction, setTransaction] = useState([])
     const [search, setSearch] = useState("");
     useEffect(() => {
-        fetch('db.json/transactions?q=" + search')
+        fetch('db.json/transactions?q=' + search)
           .then((resp) => resp.json())
           .then(transaction => setTransaction(transaction))
       }, [search])
