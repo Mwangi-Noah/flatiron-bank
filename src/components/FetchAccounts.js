@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MakeForm from "./MakeForm";
+import SearchDatabase from "./SearchDatabase";
 
 function FetchAccounts() {
     //Creating the state for search input
@@ -13,15 +14,13 @@ function FetchAccounts() {
       console.log(transaction)
       //filter out our APIData using the filter method.
      
-function searchDatabase(e){
-    <input
-        type="text"
-        placeholder="Search your Recent Transactions"
-        onChange={setSearch(e.target.value)}
-    />
+function searchDb(e){
+    setSearch(e.target.value)
+    
     }
-    return (
+return (
     <div>
+        <SearchDatabase searchDb={searchDb} />
         <MakeForm transactions={transaction} />
     </div>
     );
