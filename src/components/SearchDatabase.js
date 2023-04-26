@@ -5,7 +5,7 @@ function SearchDatabase({searchDb}) {
     <div>
       <input
         type="text"
-        placeholder="Search your Recent Transactions"
+        placeholder="Search....."
         onChange={searchDb}
       />
     </div>
