@@ -1,19 +1,43 @@
-## Introduction
-This project builds out a React application that displays a list of recent bank transactions, among other features
+TABLE OF CONTENTS
 
-## Delivarables
-As a user, I should be able to:
+1.  Introduction 
 
-1.  See a table of the transactions.
-2.  Fill out and submit the form to add a new transaction. This should add the new transaction to the table as well as post the new transaction to the backend API for persistence.
-3.  Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
+2.  Technologies used
 
-## Available Scripts
+3.  Setup/Installation
 
-In the project directory, you can run:
+4.  Approach
 
-### `npm start`
+5.  Status
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6.  Licence
 
+1.0.    INTRODUCTION.
+
+This application was built in order to help a user manage there financial resources. The Application allows a user to view previous transaction, add transactions and filter transactions by description.
+
+2.0.    Technologies used
+
+React.js
+Javascript
+CSS
+HTML
+API
+
+3.0.    Setup and Installation
+
+a.  Clone the repository to your local machine.
+b.  Install the required dependencies using npm install
+c.  Run server using the following command "npm run server"
+d. Run the following command "npm start" to initiate the application
+
+4.0.    Approach 
+
+This application was created utilizing React, CSS, Vanilla Javascript and HTML. React allows one to create application using components. This allows for easier coding and debugging, as well as optimization of the rendering time. In this app, we first created a component that would fetch data from the backend data. This data was then passed to the child component of the Fetch Container (FetchContainer.js) which included the TransactionList, TransactionForm and the SearchFilter. The Transaction List was used to generate the list of past transaction from the database. The SearchFilter component was used to search and filter the components. Finally, the TransactionForm was used to add new Transactions to the Database. The new Trasaction we added through Fetch and Post.
+
+5.0.    Status 
+
+The application is fully functional and ready for use. 
+
+6.0.    License 
+This project is licensed under the MIT License
