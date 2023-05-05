@@ -1,42 +1,164 @@
+/* App.css */
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
 }
 
-h2,
-h3 {
-  font-size: 1.5em;
-  font-family: Montserrat, sans-serif;
-  font-weight: 900;
+/* FetchContainer.css */
+
+.fetch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.table-main {
+/* TransactionForm.css */
+
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.transaction-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transaction-form-container form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.transaction-form-container label {
+  display: flex;
+  margin-right: 10px;
+  width: 150px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fields input {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  height:30px;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 280px;
+}
+
+.button-container{
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 8px;
+  height: 50px;
+  position: relative;
+  border: none;
+}
+
+.button {
+  line-height: 0;
+  height:30px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #595962;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* TransactionList.css */
+
+.main-table {
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-}
-.table-header {
-  margin-left: 35px;
-  margin-right: 15px;
-  
+  width: 100%;
 }
 
-.table-main thead tr {
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
+.header {
+  font-size: 1.25rem;
+  margin: 0.5rem;
 }
 
+.main-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.main-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.main-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.header {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e3edf4;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .main-table th,
+  .main-table td {
+    display: block;
+    width: 100%;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.app-Header {
+  text-align: center;
+}
+
+
+.app-Header h2 {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
