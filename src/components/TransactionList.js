@@ -1,6 +1,7 @@
 import React from "react";
 import PopulateList from "./PopulateList";
 
+//Accept an array of transactions as a prop and map over the array to create a PopulateList component for each transaction.
 function TransactionList({ data }) {
   const list = data
     ? data.map((item) => (
@@ -13,6 +14,8 @@ function TransactionList({ data }) {
         />
       ))
     : null;
+
+  //return a table with the headers "Date", "Description", "Category", and "Amount", and the list of PopulateList components in the table body.
 
   return (
     <table className="main-table">

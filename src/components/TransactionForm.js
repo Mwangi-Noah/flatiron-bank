@@ -6,6 +6,7 @@ function TransactionForm() {
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
 
+  //function to first check whether the form is valid before submitting the data
   function handleSubmit(e) {
     e.preventDefault();
     if (!isValidForm()) {
@@ -29,9 +30,10 @@ function TransactionForm() {
     setCategory("");
     setAmount("");
   }
-
+  //function checks whether all fields have been filled out and whether the amount field contains a valid number.
   function isValidForm() {
     if (!date || !description || !category || !amount) {
+      //If the form is not valid, an alert is shown to the user and the data is not submitted
       alert("Please fill out all fields.");
       return false;
     }
@@ -44,7 +46,7 @@ function TransactionForm() {
 
   return (
     <div className="main-form">
-      <form onSubmit={handleSubmit} className="ui form">
+      <form onSubmit={handleSubmit}>
         <div className="fields">
           <input
             value={date}
